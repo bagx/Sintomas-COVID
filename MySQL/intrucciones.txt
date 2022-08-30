@@ -1,0 +1,15 @@
+# Intrucciones para configurar la base de datos
+
+1. Instalar MYSQL
+	sudo apt install mysql-server
+	actualice el sistema antes de instalar con sudo apt update
+2. Ingresar a MySQL
+	sudo mysql
+3. Crear una base de datos.
+    CREATE DATABASE DetectorSintomas;
+4. Verificar que se haya creado
+    SHOW DATABASE;
+5. Use la base de datos DetectorSintomas    
+    use DetectorSintomas;
+6. Crear una tabla que contenga todos los datos correspondientes
+    create table registro(id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL, fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP, nombre CHAR(248) NOT NULL, correo CHAR(248) NOT NULL, temp FLOAT(4.2) NOT NULL, bpm INT(1) UNSIGNED NOT NULL, sp02 INT(1) UNSIGNED NOT NULL, protodiagnostico CHAR (248) NOT NULL);
